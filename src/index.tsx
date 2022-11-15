@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import { RecoilRoot } from "recoil";
+import App from "./App";
 
 import "./styles/global.css";
 
