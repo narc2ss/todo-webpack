@@ -22,7 +22,16 @@ module.exports = (env, argv) => {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
     },
     module: {
-      rules: [{ test: /\.tsx?$/, use: ["babel-loader", "ts-loader"] }],
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: ["babel-loader", "ts-loader"],
+        },
+        {
+          test: /.css?$/,
+          use: ["style-loader", "css-loader", "postcss-loader"],
+        },
+      ],
     },
     plugins: [
       new webpack.ProvidePlugin({
