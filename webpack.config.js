@@ -9,7 +9,7 @@ module.exports = (env, argv) => {
   return {
     mode: prod ? "production" : "development",
     devtool: prod ? "hidden-source-map" : "eval",
-    entry: "./src/index.html",
+    entry: "./src/index.tsx",
     output: {
       path: path.join(__dirname, "/dist"),
       filename: "[name].js",
